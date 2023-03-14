@@ -15,6 +15,10 @@ html {
     font: 16px/20px Arial, sans-serif;
 }
 
+a {
+    color: orange;
+}
+
 .main {
     align-items: flex-start;
     display: flex;
@@ -24,21 +28,24 @@ html {
     color: orange;
 }
 
-.search-line {
-    flex-direction: column;
-    display: flex;
-    width: 50%;
-    margin: 0 auto;
+.search {
+    &-line {
+        flex-direction: column;
+        display: flex;
+        width: 50%;
+        margin: 0 auto;
+    }
+    &-input {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        flex: 1;
+        margin-bottom: 10px;
+        height: 40px;
+        line-height: 20px;
+        padding: 8px 15px;
+    }
 }
-.search-input {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    flex: 1;
-    margin-bottom: 10px;
-    height: 40px;
-    line-height: 20px;
-    padding: 8px 15px;
-}
+
 .repos-wrapper {
     padding: 0;
     width: 50%;
@@ -55,36 +62,29 @@ html {
 .repo {
     padding-left: 100px;
     width: 50%;
-}
-
-.repo-prev {
-    display: grid;
-    margin: 10px;
-    padding: 10px;
-}
-
-a {
-    color: orangered;
-}
-.repo-full-name {
-    max-width: 100%;
-    margin-bottom: 10px;
-}
-
-.repo-prev-name {
-    font-weight: 600;
-}
-
-.repo-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-}
-.repo-list-item {
-    margin: 5px;
-    list-style-type: none;
-    padding: 0;
+    &-prev {
+        display: grid;
+        margin: 10px;
+        padding: 10px;
+        &-name {
+            font-weight: 600;
+        }
+    }
+    &-full-name {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        &-item {
+            margin: 5px;
+            list-style-type: none;
+            padding: 0;
+        }
+    }
 }
 
 .btn {
