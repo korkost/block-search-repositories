@@ -12,7 +12,7 @@ export class Search {
         this.log = log;
         this.api = api;
         this.view = view;
-        this.view.searchInput.addEventListener('keyup', this.debounce(this.searchRepos.bind(this), 500));
+        this.view.searchInput.addEventListener('keyup', this.debounce(this.searchRepos.bind(this), 800));
         this.view.loadMore.addEventListener('click', this.loadMoreRepos.bind(this));
         this.currentPage = 1;
     }
